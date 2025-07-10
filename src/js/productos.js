@@ -4,8 +4,6 @@
 const CATEGORY = window.PRODUCT_CATEGORY || "guitar";
 const CONTAINER_ID = window.PRODUCT_CONTAINER_ID || "guitar-products";
 
-
-
 // Cargar productos dinámicamente según categoría
 fetch("../assets/data/products.json")
   .then((res) => res.json())
@@ -25,16 +23,18 @@ fetch("../assets/data/products.json")
       );
       return;
     }
+    contenedor.className = "product-list"; // Aplica grid universal
+    contenedor.innerHTML = "";
     productos.forEach((producto) => {
       const card = document.createElement("div");
-      card.className = "col";
+      card.className = "product-card";
       card.innerHTML = `
         <div class="card h-100">
           <img src="${producto.image}" class="card-img-top" alt="${
         producto.name
       }">
           <div class="card-body">
-          <h5 class="card-title">${producto.name}</h5>
+            <h5 class="card-title">${producto.name}</h5>
             <p class="card-text">${producto.description || ""}</p>
             <p>
               <span class="text-muted text-decoration-line-through">${
@@ -95,7 +95,8 @@ fetch("../assets/data/products.json")
         this.innerHTML = "¡Añadido!";
         this.disabled = true;
         setTimeout(() => {
-          this.innerHTML = '<i class="bi bi-cart-plus me-2"></i>Añadir al carrito';
+          this.innerHTML =
+            '<i class="bi bi-cart-plus me-2"></i>Añadir al carrito';
           this.disabled = false;
         }, 1000);
       });

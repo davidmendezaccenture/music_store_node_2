@@ -30,11 +30,14 @@
     <div id="header-placeholder"></div>
 
     <!-- Detalle del producto -->
-    <main class="container my-5"  role="main"
-  aria-label="Detalle del producto">
-      <div id="product-detail" class="row gy-4"  role="region"
-    aria-live="polite"
-    aria-label="Información del producto seleccionado"></div>
+    <main class="container my-5" role="main" aria-label="Detalle del producto">
+      <div
+        id="product-detail"
+        class="row gy-4"
+        role="region"
+        aria-live="polite"
+        aria-label="Información del producto seleccionado"
+      ></div>
     </main>
     <!-- Pre-footer -->
     <section class="pre-footer" aria-label="Información de contacto">
@@ -55,7 +58,7 @@
           </ul>
         </div>
         <!-- Columna 2: Métodos de pago y redes sociales de contacto-->
-        <div class="pre-footer-column1" aria-label="Redes sociales">          
+        <div class="pre-footer-column1" aria-label="Redes sociales">
           <h3 id="metodos-pagos">Métodos de pago</h3>
           <div class="payment-methods">
             <a
@@ -64,7 +67,12 @@
               rel="noopener"
               aria-label="PayPal"
             >
-              <img src="../assets/images/icons8-paypal-48.png" alt="PayPal" width="48" height="48"/>
+              <img
+                src="../assets/images/icons8-paypal-48.png"
+                alt="PayPal"
+                width="48"
+                height="48"
+              />
             </a>
             <a
               href="https://www.visa.com"
@@ -72,7 +80,12 @@
               rel="noopener"
               aria-label="Visa"
             >
-              <img src="../assets/images/icons8-visa-48 (1).png" alt="Visa"  width="48" height="48"/>
+              <img
+                src="../assets/images/icons8-visa-48 (1).png"
+                alt="Visa"
+                width="48"
+                height="48"
+              />
             </a>
             <a
               href="https://www.mastercard.es"
@@ -81,7 +94,9 @@
               aria-label="MasterCard"
             >
               <img
-                src="../assets/images/icons8-mastercard-48.png" width="48" height="48"
+                src="../assets/images/icons8-mastercard-48.png"
+                width="48"
+                height="48"
                 alt="MasterCard"
               />
             </a>
@@ -93,11 +108,13 @@
             >
               <img
                 src="../assets/images/icons8-american-express-al-cuadrado-48.png"
-                alt="American Express" width="48" height="48"
+                alt="American Express"
+                width="48"
+                height="48"
               />
             </a>
           </div>
-          <br>
+          <br />
           <h3>Síguenos</h3>
           <nav aria-label="Redes sociales">
             <ul class="social-links">
@@ -110,7 +127,9 @@
                 >
                   <img
                     src="../assets/images/RedesSocialesIcons/logofacebook.png"
-                    alt="Facebook" width="48" height="48"
+                    alt="Facebook"
+                    width="48"
+                    height="48"
                 /></a>
               </li>
               <li>
@@ -122,7 +141,9 @@
                 >
                   <img
                     src="../assets/images/RedesSocialesIcons/logotwitter.png"
-                    alt="Twitter" width="48" height="48"
+                    alt="Twitter"
+                    width="48"
+                    height="48"
                 /></a>
               </li>
               <li>
@@ -134,7 +155,9 @@
                 >
                   <img
                     src="../assets/images/RedesSocialesIcons/logoinstagram.png"
-                    alt="Instagram" width="48" height="48"
+                    alt="Instagram"
+                    width="48"
+                    height="48"
                 /></a>
               </li>
               <li>
@@ -146,7 +169,9 @@
                 >
                   <img
                     src="../assets/images/RedesSocialesIcons/logoyoutube.png"
-                    alt="YouTube" width="48" height="48"
+                    alt="YouTube"
+                    width="48"
+                    height="48"
                 /></a>
               </li>
             </ul>
@@ -156,102 +181,7 @@
     </section>
     <!-- Footer dinámico -->
     <div id="footer-placeholder"></div>
-    <!-- Modal de inicio de sesión -->
-    <div
-      class="modal fade"
-      id="loginModal"
-      tabindex="-1"
-      aria-labelledby="loginModalLabel"
-      aria-modal="true"
-      role="dialog"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <form id="loginForm" aria-label="Formulario de inicio de sesión">
-            <div class="modal-header">
-              <img
-                src="../assets/images/logo RiffZone.png"
-                alt="Logo de RiffZone Music Store"
-              />
-              <h1 class="modal-title fs-5 mb-0" id="loginModalLabel">
-                Iniciar Sesión
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Cerrar ventana de inicio de sesión"
-              ></button>
-            </div>
-
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-required="true"
-                  aria-label="Correo electrónico"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="inputPassword" class="form-label">Contraseña</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword"
-                  aria-required="true"
-                  aria-label="Contraseña"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="modal-footer">
-              <div class="footer-row-1">
-                <button
-                  type="submit"
-                  class="btn btn-secondary"
-                  aria-label="Entrar"
-                >
-                  Entrar
-                </button>
-              </div>
-              <div class="footer-row-2">
-                <p role="note" aria-live="polite">¿Todavía no tienes cuenta?</p>
-                <button
-                  type="button"
-                  class="btn btn-link"
-                  aria-label="Ir a crear nueva cuenta"
-                  onclick="window.location.href='register.html'"
-                >
-                  Crear Usuario
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer-principal">
-      <div class="footer-contenedor">
-        <div class="footer-logo">
-          <img src="../assets/images/logo RiffZone.png" alt="Logo RiffZone" />
-          <span>RiffZone Music Store</span>
-        </div>
-        <div class="footer-derechos">
-          <small
-            >&copy; 2025 RiffZone Music Store. Todos los derechos
-            reservados.</small
-          >
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts-->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/auth.js"></script>

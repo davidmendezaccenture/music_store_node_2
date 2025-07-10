@@ -169,7 +169,7 @@
       </div>
     </main>
     <!-- Pre-footer -->
-       <section class="pre-footer" aria-label="Información de contacto">
+    <section class="pre-footer" aria-label="Información de contacto">
       <div class="pre-footer-container">
         <!-- Columna 1: Ventajas -->
         <div
@@ -187,7 +187,7 @@
           </ul>
         </div>
         <!-- Columna 2: Métodos de pago y redes sociales de contacto-->
-        <div class="pre-footer-column1" aria-label="Redes sociales">          
+        <div class="pre-footer-column1" aria-label="Redes sociales">
           <h3 id="metodos-pagos">Métodos de pago</h3>
           <div class="payment-methods">
             <a
@@ -196,7 +196,12 @@
               rel="noopener"
               aria-label="PayPal"
             >
-              <img src="../assets/images/icons8-paypal-48.png" alt="PayPal" width="48" height="48"/>
+              <img
+                src="../assets/images/icons8-paypal-48.png"
+                alt="PayPal"
+                width="48"
+                height="48"
+              />
             </a>
             <a
               href="https://www.visa.com"
@@ -204,7 +209,12 @@
               rel="noopener"
               aria-label="Visa"
             >
-              <img src="../assets/images/icons8-visa-48 (1).png" alt="Visa"  width="48" height="48"/>
+              <img
+                src="../assets/images/icons8-visa-48 (1).png"
+                alt="Visa"
+                width="48"
+                height="48"
+              />
             </a>
             <a
               href="https://www.mastercard.es"
@@ -213,7 +223,9 @@
               aria-label="MasterCard"
             >
               <img
-                src="../assets/images/icons8-mastercard-48.png" width="48" height="48"
+                src="../assets/images/icons8-mastercard-48.png"
+                width="48"
+                height="48"
                 alt="MasterCard"
               />
             </a>
@@ -225,11 +237,13 @@
             >
               <img
                 src="../assets/images/icons8-american-express-al-cuadrado-48.png"
-                alt="American Express" width="48" height="48"
+                alt="American Express"
+                width="48"
+                height="48"
               />
             </a>
           </div>
-          <br>
+          <br />
           <h3>Síguenos</h3>
           <nav aria-label="Redes sociales">
             <ul class="social-links">
@@ -242,7 +256,9 @@
                 >
                   <img
                     src="../assets/images/RedesSocialesIcons/logofacebook.png"
-                    alt="Facebook" width="48" height="48"
+                    alt="Facebook"
+                    width="48"
+                    height="48"
                 /></a>
               </li>
               <li>
@@ -254,8 +270,9 @@
                 >
                   <img
                     src="../assets/images/RedesSocialesIcons/logotwitter.png"
-                    alt="Twitter" width="48" height="48"
-
+                    alt="Twitter"
+                    width="48"
+                    height="48"
                 /></a>
               </li>
               <li>
@@ -267,7 +284,9 @@
                 >
                   <img
                     src="../assets/images/RedesSocialesIcons/logoinstagram.png"
-                    alt="Instagram" width="48" height="48"
+                    alt="Instagram"
+                    width="48"
+                    height="48"
                 /></a>
               </li>
               <li>
@@ -279,7 +298,9 @@
                 >
                   <img
                     src="../assets/images/RedesSocialesIcons/logoyoutube.png"
-                    alt="YouTube" width="48" height="48"
+                    alt="YouTube"
+                    width="48"
+                    height="48"
                 /></a>
               </li>
             </ul>
@@ -289,80 +310,6 @@
     </section>
     <!-- Footer dinámico -->
     <div id="footer-placeholder"></div>
-
-    <!-- Modal de inicio de sesión -->
-    <div
-      class="modal fade"
-      id="loginModal"
-      tabindex="-1"
-      aria-labelledby="loginModalLabel"
-      aria-hidden="true"
-      aria-modal="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <form aria-label="Formulario de inicio de sesión">
-            <!-- Cabecera del modal: título y botón de cerrar -->
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="loginModalLabel">
-                Iniciar Sesión
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Cerrar ventana de inicio de sesión"
-              ></button>
-            </div>
-            <!-- Cuerpo del modal: formulario de usuario y contraseña -->
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="user" class="form-label">Usuario</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="user"
-                  aria-required="true"
-                  aria-label="Usuario"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="inputPassword" class="form-label">Contraseña</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword"
-                  aria-required="true"
-                  aria-label="contraseña"
-                  required
-                />
-              </div>
-              <!-- Footer del modal: botón de entrar y crear usuario -->
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                  aria-label="Entrar"
-                >
-                  Entrar
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  aria-label="Ir a crear nueva cuenta"
-                  onclick="window.location.href='register.html'"
-                >
-                  Crear Usuario
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/auth.js"></script>
