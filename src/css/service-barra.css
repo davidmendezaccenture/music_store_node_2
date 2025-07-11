@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+/* ============================
+   menu lateral (offcanvas)
+============================= */
+.offcanvas.offcanvas-start {
+  background-color: #f8f9fa;
+  width: 260px;
+  padding: 1.5rem 1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #e89229;
+  margin-bottom: 1rem;
+}
+
+.offcanvas-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+}
+
+.offcanvas-body {
+  flex: 1 1 auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================
+   menu de navegación lateral
+============================= */
+.menu-lateral {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral li {
+  margin-bottom: 1rem;
+}
+
+.menu-lateral a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #212529;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.menu-lateral a i {
+  font-size: 1.5rem;
+  color: #e89229;
+  transition: color 0.3s;
+}
+
+.menu-lateral a:hover {
+  background-color: #e89229;
+  color: #000;
+}
+
+.menu-lateral a:hover i {
+  color: white;
+}
+
+/* ============================
+   boton de cierre
+============================= */
+.btn-close {
+  outline: none;
+}
+
+/* ============================
+   Pre-footer barra lateral
+============================= */
+.pre-footer-barra {
+  margin-bottom: 2rem;
+  text-align: start;
+}
+
+.pre-footer-barra h3 {
+  font-family: "Oswald", sans-serif;
+  color: #212529;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* ionos sociales */
+.social-links-barra {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: start;
+  align-items: center;
+}
+
+.pre-footer-barra li img {
+  width: 30px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.pre-footer-barra li a:hover img {
+  transform: scale(1.1);
+}
+
+/* ============================
+   footer
+============================= */
+.footer-contenedor-barra {
+  margin-bottom: 1rem;
+}
+
+.footer-derechos-barra {
+  align-items: center;
+  color: #212529;
+  font-family: "Oswald", sans-serif;
+}
+
+/* ============================
+   Media queries
+============================= */
+
+/* Móvil (≤576px) */
+@media (max-width: 576px) {
+  .offcanvas.offcanvas-start {
+    width: 50%;
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  .offcanvas-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .menu-lateral a {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .menu-lateral a i {
+    font-size: 1.2rem;
+  }
+
+  .pre-footer-barra h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .social-links-barra {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .footer-contenedor-barra {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Tablet (577px - 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .offcanvas.offcanvas-start {
+    width: 220px;
+  }
+
+  .offcanvas-title {
+    font-size: 1.75rem;
+  }
+
+  .menu-lateral a {
+    font-size: 1rem;
+  }
+}

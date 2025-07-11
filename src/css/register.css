@@ -1,0 +1,223 @@
+/* =========================
+   Zona general
+========================= */
+.zona-registro {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* =========================
+   Contenedor principal
+========================= */
+.registro-contenedor {
+  width: 100%;
+  max-width: 1000px; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   Caja del formulario
+========================= */
+.registro-box {
+   border: 1px solid #ddd;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  color: #333;
+}
+
+.registro-titulo {
+  border-left: 4px solid #e89229;
+  padding-left: 0.7rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #333;
+  text-align: left;
+}
+
+.registro-titulo span {
+  color: #e89229;
+}
+
+/* =========================
+   Campos
+========================= */
+.registro-box label {
+  font-weight: 500;
+  color: #222;
+}
+
+.registro-box input,
+.registro-box select,
+.registro-box textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-bottom: 0.5rem;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.registro-box input:focus,
+.registro-box select:focus,
+.registro-box textarea:focus {
+  outline: none ;
+  border-color: #e89229 ;
+  box-shadow: 0 0 0 3px rgba(232, 146, 41, 0.25) ;
+}
+
+/* Checkbox */
+.registro-box input[type="checkbox"] {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.5em;
+  accent-color: #e89229;
+  border-radius: 0.25em;
+  border: 1.5px solid #e89229;
+  background: #fff;
+  vertical-align: middle;
+}
+
+.registro-box input[type="checkbox"]:checked {
+  background: #e89229;
+  border-color: #e89229;
+  box-shadow: 0 0 0 2px #ffd6a8;
+}
+
+.registro-box input[type="checkbox"]:focus {
+  outline: 2px solid #e89229;
+  outline-offset: 2px;
+}
+
+.registro-box input[type="checkbox"]:hover {
+  box-shadow: 0 0 0 2px #ffd6a8;
+  border-color: #d97d19;
+}
+
+/* =========================
+   Botones
+========================= */
+.registro-btn,
+.registro-box button,
+.registro-box input[type="submit"],
+button[type="submit"].registro-btn,
+button[type="submit"].btn-primary {
+  background-color: #e89229 ;
+  color: #fff ;
+  border: none ;
+  border-radius: 0.5rem;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.registro-btn:hover,
+.registro-box button:hover,
+.registro-box input[type="submit"]:hover,
+button[type="submit"].registro-btn:hover,
+button[type="submit"].btn-primary:hover {
+  background-color: #d97d19 ;
+}
+
+/* =========================
+   Botones secundarios
+========================= */
+.btn-detail.registro-style {
+  background: #fff;
+  color: #e89229;
+  border: 2px solid #e89229;
+  font-weight: 500;
+}
+
+.btn-detail.registro-style:hover,
+.btn-detail.registro-style:focus {
+  background: #e89229;
+  color: #fff;
+}
+
+.btn-detail {
+  background: transparent ;
+  color: #e89229;
+  border: 2px solid #e89229 ;
+  font-weight: 600;
+}
+
+.btn-detail:hover,
+.btn-detail:focus {
+  background: #e89229 ;
+  color: #fff ;
+}
+
+/* =========================
+   Feedback y ayuda
+========================= */
+.registro-box .invalid-feedback {
+  color: #e53935;
+  font-size: 0.95rem;
+  margin-top: -0.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.registro-box .form-text {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Media queries
+========================= */
+
+/* Móviles (hasta 600px) */
+@media (max-width: 600px) {
+  .registro-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .registro-titulo {
+    font-size: 1.4rem;
+  }
+
+  .registro-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+/* Tablets (601px - 992px) */
+@media (min-width: 601px) and (max-width: 992px) {
+  .registro-contenedor {
+    padding: 0 2rem;
+  }
+
+  .registro-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .registro-titulo {
+    font-size: 1.7rem;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 993px) {
+  .registro-contenedor {
+    padding: 0;
+  }
+}

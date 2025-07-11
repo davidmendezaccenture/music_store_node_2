@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+
+/* Estructura principal */
+main {
+  padding: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.servicio-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.texto-central-servicios,
+.section-servicios {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* encabezado de sección */
+.texto-central-servicios {
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-family: "Oswald", sans-serif;
+}
+
+.about-description {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+  color: #333;
+  font-weight: 400;
+}
+
+.about-store-name {
+  font-weight: bold;
+  color: #c77619;
+}
+
+.texto-central-servicios h3 {
+  color: #c77619;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+  margin-top: 2rem;
+}
+
+/* Servicios desplegable */
+.section-servicios {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 0.5rem  ;
+}
+
+.container-servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container-servicios h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.servicio {
+  border: 1px solid #fdfdfd;
+  border-radius: 8px;
+  background: #c77619;
+  overflow: hidden;
+}
+
+.servicio-desplegable {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #000000;
+}
+
+.servicio-desplegable span {
+  flex-grow: 1;
+  margin-left: 0.5rem;
+}
+
+.servicio-desplegable span:hover {
+  color: #fff;
+}
+
+.servicio-desplegable i {
+  color: #fff;
+}
+
+.servicio-body {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.icono-rotar {
+  transition: transform 0.3s ease;
+}
+
+.icono-rotar.girado {
+  transform: rotate(180deg);
+}
+
+
+/* ===========================
+   MEDIA QUERIES RESPONSIVE
+=========================== */
+
+/* MÓVIL - hasta 576px */
+@media (max-width: 576px) {
+  .texto-central-servicios,
+  .section-servicios {
+    padding: 1rem;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .texto-central-servicios h3,
+  .container-servicios h2 {
+    font-size: 1.1rem;
+  }
+
+  .servicio-desplegable {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .servicio-desplegable span {
+    margin-left: 0;
+  }
+
+  .servicio-body {
+    font-size: 0.95rem;
+  }
+}
+
+/* TABLET - de 577px a 991px */
+@media (min-width: 577px) and (max-width: 991px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-description {
+    font-size: 1.05rem;
+  }
+
+  .texto-central-servicios h3,
+  .container-servicios h2 {
+    font-size: 1.2rem;
+  }
+
+  .servicio-body {
+    font-size: 1rem;
+  }
+}
+
+/* ESCRITORIO - desde 992px */
+@media (min-width: 992px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1.2rem;
+  }
+
+  .container-servicios h2 {
+    font-size: 1.5rem;
+  }
+}

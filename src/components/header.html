@@ -1,0 +1,289 @@
+<!-- Header común para todas las páginas -->
+<header
+  class="header"
+  role="banner"
+  aria-label="Encabezado principal de RiffZone Music Store"
+>
+  <div class="header-bg"></div>
+  <div class="header-container">
+    <!-- Botón hamburguesa solo visible en móvil -->
+    <button
+      class="hamburger"
+      id="hamburgerBtn"
+      aria-label="Abrir menú de navegación"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="logo-section" aria-label="Logo de RiffZone Music Store">
+      <a href="/pages/index.html" class="logo-link">
+        <img
+          src="../assets/images/logo RiffZone.png"
+          alt="Logo de RiffZone Music Store"
+        />
+      </a>
+    </div>
+    <!-- barra de navegación principal (escritorio) -->
+    <nav
+      class="nav-header desktop-nav"
+      role="navigation"
+      aria-label="barra de navegación principal"
+    >
+      <ul class="nav-list" role="menubar">
+         <li role="none">
+          <a href="../pages/index.html" role="menuitem" aria-label="Inicio"
+            ><i class="bi bi-house-door" aria-hidden="true" title="Inicio"></i>Inicio</a
+          >
+        </li>
+        <li role="none">
+          <a
+            href="../pages/servicios.html"
+            role="menuitem"
+            aria-label="Servicio"
+            ><i class="bi bi-tools" aria-hidden="true" title="Servicio"></i> Servicio</a
+          >
+        </li>
+        <li role="none">
+          <a href="../pages/contact.html" role="menuitem" aria-label="Contacto"
+            ><i class="bi bi-envelope" aria-hidden="true" title="contacto"></i> Contacto</a
+          >
+        </li>
+        <li role="none">
+          <a
+            href="/pages/sobre-nosotros.html"
+            role="menuitem"
+            aria-label="Sobre Nosotros"
+            ><i class="bi bi-info-circle" aria-hidden="true" title="Sobre Nosotros"></i> Sobre Nosotros</a
+          >
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- icono carrito y login/usuario -->
+    <div class="user-actions nav-list">
+      <a
+        href="/pages/carrito.html"
+        aria-label="Carrito de compras"
+        class="cart-link nav-link"
+      >
+        <i class="bi bi-cart-plus"></i>
+        <span class="cart-counter" id="cart-count">0</span>
+      </a>
+      <span id="userWelcome" class="greeting" style="display: none"
+        >Hola, <span id="userName"></span
+      ></span>
+      <button
+        class="login-button"
+        id="loginBtn"
+        data-bs-toggle="modal"
+        data-bs-target="#loginModal"
+        aria-label="Iniciar sesión en la tienda RiffZone Music Store"
+      >
+        <i class="bi bi-person" aria-hidden="true" title="Iniciar sesión"></i> Iniciar Sesión
+      </button>
+      <button
+        class="login-button"
+        id="logoutBtn"
+        style="display: none"
+        aria-label="Cerrar sesión en la tienda RiffZone Music Store"
+      >
+        Cerrar sesión
+      </button>
+    </div>
+  </div>
+  <!-- Buscador global dentro del header -->
+  <br>
+  <form id="catalog-search-form" class="catalog-search-form catalog-search-bar-global buscador-header-rediseñado" role="search" aria-label="Buscar productos">
+    <div class="buscador-row buscador-row-modern buscador-glass">
+      <input
+        type="search"
+        id="search-input"
+        class="form-control buscador-input buscador-input-modern"
+        placeholder="Buscar productos..."
+        aria-label="Buscar productos"
+        autocomplete="off"
+      />
+      <button type="submit" id="search-button" class="buscador-boton-modern buscador-boton-glass" aria-label="Buscar">
+        <i class="bi bi-search" aria-hidden="true" title="Buscar"></i>
+      </button>
+    </div>
+    <br>
+    <button class="checkout-cancel buscador-filtros-btn mt-2" type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#filtersOffcanvas"
+      aria-controls="filtersOffcanvas"
+      aria-label="Mostrar filtros avanzados">
+      <i class="bi bi-sliders" aria-hidden="true" title="Filtros avanzados"></i>
+      <span class="d-none d-md-inline ms-1">Filtros</span>
+    </button>
+  </form>
+
+
+<!-- Offcanvas de filtros avanzados (ahora a la izquierda) -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="filtersOffcanvas" aria-labelledby="filtersOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="filtersOffcanvasLabel">Filtros avanzados</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div id="advanced-filters" class="advanced-filters" tabindex="-1">
+      <select id="category-filter" class="form-select mb-2" aria-label="Filtrar por categoría">
+        <option value="">Todas las categorías</option>
+        <option value="acoustic-guitars">Guitarras acústicas</option>
+        <option value="electric-guitars">Guitarras eléctricas</option>
+        <option value="basses">Bajos</option>
+        <option value="drums">Baterías</option>
+        <option value="keyboard">Teclados</option>
+        <option value="amplifiers">Amplificadores</option>
+        <option value="effect-pedals">Pedales</option>
+        <option value="classical-guitars">Guitarras clásicas</option>
+      </select>
+      <input type="number" id="min-price" class="form-control mb-2" placeholder="Precio mínimo" aria-label="Precio mínimo" min="0" />
+      <input type="number" id="max-price" class="form-control mb-2" placeholder="Precio máximo" aria-label="Precio máximo" min="0" />
+      <select id="brand-filter" class="form-select mb-2" aria-label="Filtrar por marca">
+        <option value="">Todas las marcas</option>
+        <option value="Yamaha">Yamaha</option>
+        <option value="Fender">Fender</option>
+        <option value="Ibanez">Ibanez</option>
+        <option value="Alhambra">Alhambra</option>
+        <option value="Martin">Martin</option>
+        <option value="Gibson">Gibson</option>
+        <option value="Cordoba">Cordoba</option>
+        <option value="Jackson">Jackson</option>
+        <option value="Marshall">Marshall</option>
+        <option value="Boss">Boss</option>
+        <option value="Electro-Harmonix">Electro-Harmonix</option>
+        <option value="Pearl">Pearl</option>
+        <option value="Roland">Roland</option>
+        <option value="Zildjian">Zildjian</option>
+        <option value="Mapex">Mapex</option>
+        <option value="DW">DW</option>
+        <option value="Tama">Tama</option>
+        <option value="Casio">Casio</option>
+        <option value="Korg">Korg</option>
+        <option value="Hammond">Hammond</option>
+      </select>
+      <select id="offer-filter" class="form-select mb-2" aria-label="Filtrar por ofertas">
+        <option value="">Todas</option>
+        <option value="on-offer">Solo en oferta</option>
+      </select>
+      <select id="sort-filter" class="form-select mb-2" aria-label="Ordenar por">
+        <option value="relevance">Relevancia</option>
+        <option value="price-asc">Precio: menor a mayor</option>
+        <option value="price-desc">Precio: mayor a menor</option>
+        <option value="popularity">Popularidad</option>
+        <option value="newest">Novedades</option>
+      </select>
+      
+      <!-- Botón para aplicar filtros -->
+      <button type="button" id="apply-filters-btn" class="btn btn-primary w-100 mt-3" aria-label="Aplicar filtros seleccionados">
+        <i class="bi bi-check-circle me-2" aria-hidden="true" title="aplicar filtros"></i>
+        Aplicar filtros
+      </button>
+    </div>
+  </div>
+</div>
+  <!-- Menú móvil oculto por defecto -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil de navegación">
+    <ul>
+       <li >
+          <a href="../pages/index.html"
+            ><i class="bi bi-house-door" aria-hidden="true" title="Inicio"></i>Inicio</a
+          >
+        </li>
+      <li>
+        <a href="../pages/servicios.html"
+          ><i class="bi bi-tools" aria-hidden="true" title="Servicio"></i> Servicio</a
+        >
+      </li>
+      <li>
+        <a href="../pages/contact.html"
+          ><i class="bi bi-envelope" aria-hidden="true" title="Contacto"></i> Contacto</a
+        >
+      </li>
+      <li>
+        <a href="/pages/sobre-nosotros.html"
+          ><i class="bi bi-info-circle" aria-hidden="true" title="Sobre Nosotros"></i> Sobre Nosotros</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <!-- Modal de inicio de sesión -->
+  <div
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+    aria-labelledby="loginModalLabel"
+    aria-hidden="true"
+    aria-modal="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form id="loginForm" aria-label="Formulario de inicio de sesión">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">
+              Iniciar Sesión
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar ventana de inicio de sesión"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="loginEmail"
+                aria-required="true"
+                aria-label="Correo electrónico"
+                autocomplete="username"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Contraseña</label>
+              <div class="input-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  aria-required="true"
+                  aria-label="Contraseña"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  id="togglePassword"
+                  tabindex="-1"
+                  aria-label="Mostrar u ocultar contraseña"
+                >
+                  <i class="bi bi-eye" id="togglePasswordIcon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary" aria-label="Entrar">
+              Entrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              aria-label="Ir a crear nueva cuenta"
+              onclick="window.location.href='register.html'"
+            >
+              Crear Usuario
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>

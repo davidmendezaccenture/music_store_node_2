@@ -1,48 +1,408 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RaiRock Music Store</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RiffZone Music Store</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/cookies-banner.css" />
+    <link rel="stylesheet" href="../css/barra-secundaria.css" />
+    <link rel="stylesheet" href="../css/buscador.css"/>
+    <link rel="stylesheet" href="../css/sobre-nosotros.css" />
+    <link rel="stylesheet" href="../pages/politica-cookies.html"
+  </head>
+  <body>
     <!-- Cabecera de la página -->
-    <header>
-            hola
-    </header>
-
-    <!-- Contenido principal de la página -->
+    <div id="header-placeholder"></div>
+    <div id="login-modal-placeholder"></div>
+    <!-- Main -->
     <main>
-        <!-- Encabezado -->
-        <!-- Barra de navegación secundaria -->
-        <!-- Sección de productos -->   
-            <!-- Carrusel de imágenes -->
-            <!-- Controles del carrusel -->
-            <!-- Aquí se mostrarán los productos -->
-        
-        <!-- opinion clientes -->
-        <!-- Opiniones de nuestros clientes -->
-            <!-- Opinión 1 -->
-                <!-- Estrellas de puntuación -->
-            <!-- Opinión 2 -->
-                <!-- Estrellas de puntuación -->
-            <!-- Opinión 3 -->
-                <!-- Estrellas de puntuación -->
+      <!-- Título de productos -->
+        <br><br>
+        <h1 id="products-title" class="main-title">Productos disponibles</h1>
+      <!-- Barra de navegación secundaria -->
+        <div id="products-nav-placeholder"></div>
+      <!-- Carrusel manual productos -->
+      <section
+        aria-label="Carrusel de productos destacados"
+        role="region"
+        class="carousel"
+      >
+        <div
+          role="list"
+          aria-live="polite"
+          aria-atomic="true"
+          aria-relevant="additions removals"
+        >
+          <div role="listitem" class="product-item active" aria-hidden="true">
+            <img
+              src="../assets/images/guitar10.png"
+              alt="Guitarra acústica profesional"
+            />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img src="../assets/images/bajo2.png" alt="Bajo profesional" />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img
+              src="../assets/images/drum2.png"
+              alt="Batería acústica profesional"
+            />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img src="../assets/images/key3.jpg" alt="Teclado eléctrico" />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img src="../assets/images/saxo7.png" alt="Saxofón profesional" />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img src="../assets/images/flauta1.png" alt="Flauta profesional" />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img
+              src="../assets/images/trompeta3.png"
+              alt="Trompeta profesional"
+            />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img
+              src="../assets/images/amp5.png"
+              alt="Amplificador de guitarra"
+            />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img src="../assets/images/mesa1.png" alt="Mesa de mezcla" />
+          </div>
+          <div role="listitem" class="product-item" aria-hidden="true">
+            <img src="../assets/images/imagen4.png" alt="Imagen tienda" />
+          </div>
+        </div>
+
+</div>
+</section>
+<!-- Carousel dots for main image carousel: fuera del carrusel, justo debajo de las imágenes -->
+<div class="carousel-dots" id="main-carousel-dots" aria-label="Selector de imagen del carrusel" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="slide1" class="carousel-dot" onclick="selectSlide(0)">1</button>
+    <button role="tab" aria-selected="false" aria-controls="slide2" class="carousel-dot" onclick="selectSlide(1)">2</button>
+    <button role="tab" aria-selected="false" aria-controls="slide3" class="carousel-dot" onclick="selectSlide(2)">3</button>
+  
+</div>
+
+      <!-- Secciones de productos (puedes rellenar dinámicamente) -->
+      <section
+        id="products-list"
+        aria-label="Listado de productos destacados"
+      ></section>
+      <section id="guitarras" aria-label="Sección Guitarras"></section>
+      <section id="baterias" aria-label="Sección Baterías"></section>
+      <section id="teclados" aria-label="Sección Teclados"></section>
+
+      <!-- Carrusel de testimonios -->
+        <br>
+        <h2 id="products-title" class="main-title">Opiniones de nuestros clientes</h2>
+        <div class="testimonials-carousel-inner">
+          <article
+            role="article"
+            class="testimonial-card testimonial-active"
+            aria-label="Testimonio de cliente Juan Pérez"
+          >
+            <img
+              src="../assets/images/testimonios/juan.jpg"
+              alt="Foto de Juan Pérez"
+              width="80"
+              height="80"
+            />
+            <h3>Juan Pérez</h3>
+            <p class="profession">Músico profesional</p>
+            <p class="stars" aria-label="Valoración: 5 estrellas">★★★★★</p>
+            <blockquote>
+              Gran variedad y calidad en los productos. Muy recomendables.
+            </blockquote>
+          </article>
+          <article
+            role="article"
+            class="testimonial-card"
+            aria-label="Testimonio de cliente María López"
+          >
+            <img
+              src="../assets/images/testimonios/maria.jpg"
+              alt="Foto de María López"
+              width="80"
+              height="80"
+            />
+            <h3>María López</h3>
+            <p class="profession">Productora musical</p>
+            <p class="stars" aria-label="Valoración: 4 estrellas">★★★★☆</p>
+            <blockquote>Excelente atención y precios competitivos.</blockquote>
+          </article>
+          <article
+            role="article"
+            class="testimonial-card"
+            aria-label="Testimonio de cliente Carlos Martínez"
+          >
+            <img
+              src="../assets/images/testimonios/carlos.jpg"
+              alt="Foto de Carlos Martínez"
+              width="80"
+              height="80"
+            />
+            <h3>Carlos Martínez</h3>
+            <p class="profession">DJ</p>
+            <p class="stars" aria-label="Valoración: 5 estrellas">★★★★★</p>
+            <blockquote>
+              Equipamiento profesional para DJ con buena calidad.
+            </blockquote>
+          </article>
+        </div>
+        <div
+          class="testimonial-dots"
+          aria-label="Navegación de testimonios"
+        ></div>
     </main>
-
+<style>
+  .focus-visible:focus {
+    outline: 3px solid #eb8526;
+    outline-offset: 2px;
+  }
+</style>
     <!-- Pre-footer -->
-            <!-- Columna 1: Comprar y pagar de forma segura -->
-            <!-- Columna 2: Ventajas -->
-            <!-- Columna 3: Redes sociales -->
+    <section class="pre-footer" aria-label="Información de contacto">
+      <div class="pre-footer-container">
+        <!-- Columna 1: Ventajas -->
+        <div
+          class="pre-footer-column2"
+          aria-labelledby="ventajas de usar RiffZone Music Store"
+        >
+          <h3 id="ventajas-title">
+            Ventajas de comprar en RiffZone Music Store
+          </h3>
+          <ul>
+            <li>Garantía de calidad</li>
+            <li>Devolución fácil y rápida</li>
+            <li>Servicio técnico</li>
+            <li>Asesoramiento personalizado</li>
+          </ul>
+        </div>
+        <!-- Columna 2: Métodos de pago y redes sociales de contacto-->
+        <div class="pre-footer-column1" aria-label="Redes sociales">          
+          <h3 id="metodos-pagos">Métodos de pago</h3>
+          <div class="payment-methods">
+            <a
+              href="https://www.paypal.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="PayPal"
+            >
+              <img src="../assets/images/icons8-paypal-48.png" alt="PayPal" width="48" height="48"/>
+            </a>
+            <a
+              href="https://www.visa.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visa"
+            >
+              <img src="../assets/images/icons8-visa-48 (1).png" alt="Visa"  width="48" height="48"/>
+            </a>
+            <a
+              href="https://www.mastercard.es"
+              target="_blank"
+              rel="noopener"
+              aria-label="MasterCard"
+            >
+              <img
+                src="../assets/images/icons8-mastercard-48.png" width="48" height="48"
+                alt="MasterCard"
+              />
+            </a>
+            <a
+              href="https://www.americanexpress.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="American Express"
+            >
+              <img
+                src="../assets/images/icons8-american-express-al-cuadrado-48.png"
+                alt="American Express" width="48" height="48"
+              />
+            </a>
+          </div>
+          <br>
+          <h3>Síguenos</h3>
+          <nav aria-label="Redes sociales">
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61577710023966&locale=es_ES"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <img
+                    src="../assets/images/RedesSocialesIcons/logofacebook.png"
+                    alt="Facebook" width="48" height="48"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/RiffzoneMStore"
+                  aria-label="Twitter"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="../assets/images/RedesSocialesIcons/logotwitter.png"
+                    alt="Twitter" width="48" height="48"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/riffzone_music_store/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <img
+                    src="../assets/images/RedesSocialesIcons/logoinstagram.png"
+                    alt="Instagram" width="48" height="48"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@RiffZoneMusicStore"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="YouTube"
+                >
+                  <img
+                    src="../assets/images/RedesSocialesIcons/logoyoutube.png"
+                    alt="YouTube" width="48" height="48"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- Footer dinámico -->
+    <div id="footer-placeholder"></div>
 
-    <!-- Footer -->
     <!-- Modal de inicio de sesión -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+      aria-modal="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form aria-label="Formulario de inicio de sesión">
+            <!-- Cabecera del modal: título y botón de cerrar -->
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="loginModalLabel">
+                Iniciar Sesión
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar ventana de inicio de sesión"
+              ></button>
+            </div>
+            <!-- Cuerpo del modal: formulario de usuario y contraseña -->
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="user" class="form-label">Usuario</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="user"
+                  aria-required="true"
+                  aria-label="Usuario"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  aria-required="true"
+                  aria-label="contraseña"
+                  required
+                  autocomplete="current-password"
+                />
+              </div>
+              <!-- Footer del modal: botón de entrar y crear usuario -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  aria-label="Entrar"
+                >
+                  Entrar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  aria-label="Ir a crear nueva cuenta"
+                  onclick="window.location.href='register.html'"
+                >
+                  Crear Usuario
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/auth.js"></script>
-    <script src="../js/app.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/carrusel.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/validacion-registro.js"></script>
+    <script src="../js/service.js"></script>
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/cookies-banner.js"></script>
+  <!--para dar accesibilidad al carrusel-->
+  <script> 
+  function selectSlide(index) {
+  const items = document.querySelectorAll('.product-item');
+  const dots = document.querySelectorAll('#main-carousel-dots button');
+
+  items.forEach((item, i) => {
+    item.classList.toggle('active', i === index);
+    item.setAttribute('aria-hidden', i !== index);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.setAttribute('aria-selected', i === index);
+  });
+}
+</script>
+  </body>
 </html>

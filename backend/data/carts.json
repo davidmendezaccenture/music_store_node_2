@@ -1,3 +1,10 @@
 {
-  "guest": []
+  "guest": [],
+  "testcarrito": [
+    {
+      "id": 1,
+      "nombre": "Producto de prueba",
+      "cantidad": 2
+    }
+  ]
 }

@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+/* Contenedor general para detalle producto */
+#product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    color: #222;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(232, 146, 41, 0.15);
+  }
+  
+  /* Imagen producto */
+  #product-detail img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(232, 146, 41, 0.25);
+  }
+  
+  /* Contenido de texto */
+  #product-detail .col-md-6 {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ===================================
+   Categoría texto
+=================================== */
+  #product-detail p.text-muted {
+    text-transform: capitalize;
+    font-style: "Oswald", sans-serif;
+    color: #333;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Precio */
+  #product-detail p.h4 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    font-style: "Oswald", sans-serif;
+  }
+  
+  /* Precio tachado */
+  #product-detail del.text-secondary {
+    opacity: 0.7;
+  }
+  
+  /* Descripción */
+  #product-detail p.my-3 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: #333;
+     font-style: "Oswald", sans-serif;
+  }
+  
+  /* Botón añadir al carrito */
+  #add-to-cart-btn {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(232, 146, 41, 0.4);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  #add-to-cart-btn:hover,
+  #add-to-cart-btn:focus {
+    background-color: #d67d1f;
+    box-shadow: 0 6px 14px rgba(232, 146, 41, 0.7);
+    outline: none;
+  }
+  
+  /* Contenedor botones (añadir y volver) */
+  #product-detail .d-flex.justify-content-between {
+    gap: 1rem;
+  }
+  
+  /* Botón volver */
+  #back-btn {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.9rem;
+    background-color: #c77619;
+    color: #fff;
+    box-shadow: 0 3px 6px rgba(232, 146, 41, 0.25);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  #back-btn:hover,
+  #back-btn:focus {
+    box-shadow: 0 6px 12px rgba(232, 146, 41, 0.8);
+    outline: none;
+    border: 2px solid #c77619;
+    color:#c77619;
+    background-color: transparent;
+  }
+  
+  /* Iconos dentro de botones (Bootstrap Icons) */
+  #add-to-cart-btn i,
+  #back-btn i {
+    font-size: 1.2rem;
+  }
+  
+  /* Icono de camión */
+  i.bi-truck {
+    font-size: 1.3rem;
+  }
+  
+  /* Texto "Entrega en 24 horas" y otros dentro de la lista */
+  li.mt-2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #1558d6; /* azul */
+  }
+  
+  /* Icono de reloj */
+  i.bi-clock-history {
+    font-size: 1.3rem;
+  }
+
+  /* ============================
+Media queries
+============================= */
+  @media (max-width: 576px) {
+  #product-detail {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  #product-detail .col-md-6 {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  #product-detail p.h4 {
+    font-size: 1.4rem;
+  }
+
+  #product-detail p.my-3 {
+    font-size: 1rem;
+  }
+
+  #add-to-cart-btn,
+  #back-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+
+  li.mt-2 {
+    font-size: 0.9rem;
+  }
+}
+
+/* tablets: 577px y 992px */
+@media (min-width: 577px) and (max-width: 992px) {
+  #product-detail {
+    padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  #product-detail .col-md-6 {
+    flex: 1 1 100%;
+  }
+
+  #product-detail p.h4 {
+    font-size: 1.6rem;
+  }
+
+  li.mt-2 {
+    font-size: 1rem;
+  }
+}
+
+/* Escritorio: ≥993px */
+@media (min-width: 993px) {
+  #product-detail {
+    flex-direction: row;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  #product-detail .col-md-6 {
+    flex: 1 1 45%;
+  }
+
+  #product-detail p.h4 {
+    font-size: 1.75rem;
+  }
+
+  li.mt-2 {
+    font-size: 1rem;
+  }
+}

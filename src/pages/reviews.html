@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle del Producto | RiffZone Music Store</title>
+
+  <!-- Fuentes y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/product-detail.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link rel="stylesheet" href="../css/reviews.css" />
+</head>
+<body>
+  <!-- Cabecera y login modal -->
+  <div id="header-placeholder"></div>
+  <div id="login-modal-placeholder"></div>
+
+  <!-- Contenedor principal -->
+  <main class="container my-5">
+    <div id="product-detail" class="row gy-4"></div>
+
+    <!-- 🔽 NUEVO: Sección de reseñas debajo del producto -->
+    <section id="reviews-section" class="mt-5">
+      <h3>Reseñas de clientes</h3>
+      <div id="review-list"></div>
+
+      <form id="review-form" class="mt-4">
+        <div class="mb-2">
+          <label for="name" class="form-label">Nombre:</label>
+          <input type="text" id="name" class="form-control" required />
+        </div>
+
+        <div class="mb-2">
+          <label for="comment" class="form-label">Comentario:</label>
+          <textarea id="comment" class="form-control" required></textarea>
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label">Valoración:</label>
+          <div id="rating">
+            <i data-value="1" class="star">🎸</i>
+            <i data-value="2" class="star">🎸</i>
+            <i data-value="3" class="star">🎸</i>
+            <i data-value="4" class="star">🎸</i>
+            <i data-value="5" class="star">🎸</i>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Enviar reseña</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pre-footer -->
+  <section class="pre-footer">
+    <div class="pre-footer-container">
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/loadComponents.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/product-detail.js"></script>
+  <script src="../js/reviews.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Fernando Paz",
+    "email": "leader@gmail.com",
+    "mensaje": "hola funciona o no",
+    "telefono": "1234567",
+    "fecha": "2025-06-24T21:59:25.869Z"
+  },
+  {
+    "nombre": "keyliany carolina",
+    "email": "keylianyolivier@gmail.com",
+    "mensaje": "funciona ahora el correo",
+    "telefono": "1234567",
+    "fecha": "2025-06-25T16:51:11.501Z"
+  },
+  {
+    "nombre": "Josefina",
+    "email": "josefina@example.com",
+    "mensaje": "Hola, me interesa una guitarra",
+    "telefono": "1234567",
+    "fecha": "2025-06-26T19:17:59.151Z"
+  },
+  {
+    "nombre": "Josefina",
+    "email": "josefina@example.com",
+    "mensaje": "Hola, me interesa una guitarra",
+    "telefono": "1234567",
+    "fecha": "2025-06-26T20:09:41.460Z"
+  },
+  {
+    "nombre": "Josefina",
+    "email": "josefina@example.com",
+    "mensaje": "Hola, me interesa una guitarra",
+    "telefono": "1234567",
+    "fecha": "2025-06-26T20:41:35.474Z"
+  }
+]

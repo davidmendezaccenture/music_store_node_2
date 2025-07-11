@@ -1,0 +1,111 @@
+[
+  {
+    "username": "testuser",
+    "password": "$2b$10$QJa1Uh5Jhu.L37QupSeJz.pZC0Tupc03./cCoNSa0xzfPDVBXBzgC",
+    "email": "testuser@email.com",
+    "isLogged": false,
+    "apellidos": "Prueba",
+    "telefono": "600000001",
+    "pais": "España",
+    "region": "Madrid",
+    "fechaNacimiento": "1990-01-01",
+    "direccion": "Calle Falsa 123"
+  },
+  {
+    "username": "José Manuel",
+    "password": "$2b$10$qTSWB6vbkIPmK79BWRTeiujJ5.ByP47QdlgGAnF3HVndjUt1OiNzm",
+    "email": "jmmartos@email.com",
+    "isLogged": false,
+    "apellidos": "Martínez",
+    "telefono": "600000002",
+    "pais": "España",
+    "region": "Sevilla",
+    "fechaNacimiento": "1985-05-12",
+    "direccion": "Av. Andalucía 45"
+  },
+  {
+    "username": "Aarón",
+    "password": "$2b$10$LQlkZnjt7X1Q/R.tG1SyxeyTUafY0ojKu9xNWIV.ysjzYh0TIpuFm",
+    "email": "apesqueira@email.com",
+    "isLogged": false,
+    "apellidos": "Pesqueira",
+    "telefono": "600000003",
+    "pais": "España",
+    "region": "Granada",
+    "fechaNacimiento": "1992-03-20",
+    "direccion": "Insurgentes Sur 100"
+  },
+  {
+    "username": "Keyliany",
+    "password": "$2b$10$vUZ4wJcF.VkJisJLaSqKDOk/Cj7xqK0a1wjwCJgBRiNu3iU5B2jfO",
+    "email": "koliver@email.com",
+    "isLogged": false,
+    "apellidos": "Oliver",
+    "telefono": "600000004",
+    "pais": "España",
+    "region": "Málaga",
+    "fechaNacimiento": "1995-07-15",
+    "direccion": "Calle Corrientes 200"
+  },
+  {
+    "username": "Andrea",
+    "password": "$2b$10$o.GYZIAlXxx4otaQxZ5/r.u5./wKDkySR1gsLSY4tMzgzOIxG2Do2",
+    "email": "abarnedo@email.com",
+    "isLogged": false,
+    "apellidos": "Boedo",
+    "telefono": "600000005",
+    "pais": "España",
+    "region": "A Coruña",
+    "fechaNacimiento": "1998-11-30",
+    "direccion": "Rúa Real 50"
+  },
+  {
+    "username": "Ramon",
+    "password": "$2b$10$JPsb/9AyUhsd0otyaOx.BuxY9/OKUnnu7CmND775MGiLYXqUgwFsu",
+    "email": "rramos@email.com",
+    "isLogged": false,
+    "apellidos": "Ramos",
+    "telefono": "600000006",
+    "pais": "España",
+    "region": "Vallecas",
+    "fechaNacimiento": "1980-09-10",
+    "direccion": "Av. del Rock 10"
+  },
+  {
+    "username": "Iván",
+    "password": "$2b$10$yiBCN6m/hFIO6P2kz7x3quwwEZV3LWXUOZhoJjf7X4727RIhjvMRK",
+    "email": "igarcia@email.com",
+    "isLogged": false,
+    "apellidos": "García",
+    "telefono": "600000007",
+    "pais": "España",
+    "region": "Madrid",
+    "fechaNacimiento": "1993-04-22",
+    "direccion": "Passeig de Gràcia 1"
+  },
+  {
+    "username": "Ivonne",
+    "password": "$2b$10$FUHLZpTmUtpoa6eVoXBA..SjMSDuj3evJk3fmEN.2K4bylj0hCIoW",
+    "email": "imorgan@email.com",
+    "isLogged": false,
+    "apellidos": "Morgan",
+    "telefono": "600000008",
+    "pais": "España",
+    "region": "Madrid",
+    "fechaNacimiento": "1996-12-05",
+    "direccion": "Cra 7 #10-20"
+  },
+  {
+    "username": "Nala",
+    "password": "$2b$10$Dg8ySX/f4XBU/IAOM/cVk.VcWOAjASxpjY5I4U4VEYQWtpNntNIbC",
+    "email": "nala@email.com",
+    "nombre": "Nala",
+    "apellidos": "Boedo",
+    "telefono": "612345678",
+    "pais": "España",
+    "region": "Galicia",
+    "fechaNacimiento": "2013-09-07",
+    "direccion": "Montecito",
+    "isLogged": false
+  }
+]

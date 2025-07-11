@@ -1,44 +1,264 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitarras y Bajos - RaiRock Music Store</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-    <!-- Encabezado -->
-    <header>
-        <!-- Botón para regresar a la página principal -->
-        <!-- Logo y Título -->
-        <!-- Contador del carrito -->
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guitarras y Bajos - RiffZone Music Store</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/cookies-banner.css" />
+    <link rel="stylesheet" href="../css/barra-secundaria.css" />
+    <link rel="stylesheet" href="../css/guitar.css"/>
+    <link rel="stylesheet" href="../css/buscador.css"/>
+       <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/cookies-banner.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <div id="login-modal-placeholder"></div>
 
     <!-- Contenido principal -->
-    <main>
-        <!-- Encabezado -->
-            <!-- Menú de Filtros -->
-                <!-- Tarjetas existentes -->
-                <!-- Nuevas tarjetas -->
+    <main role="main" aria-label="Catálogo de guitarras" class="container pb-5">
     
+      <!-- botón de volver-->
+      <button
+        class="volver-button"
+        id="btnvolver"
+        onclick="location.href='../pages/index.html';"
+        aria-label="Volver a la tienda RiffZone Music Store"
+      >
+        <i class="bi bi-arrow-left" aria-hidden="true" title="Volver atrás"></i>
+        Volver
+      </button>
+      <!-- Título principal -->
+      <h2 id="products-title" class="main-title">Catálogo de Guitarras</h2>
+      <!-- Filtro por categoría -->
+      <div id="products-nav-placeholder"></div>
+      <!-- Cards de producto -->
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="guitar-products"></div>
+    </main>
     <!-- Pre-footer -->
-                <!-- Columna 1: Comprar y pagar de forma segura -->
-                <!-- Columna 2: Ventajas -->
-                <!-- Columna 3: Redes sociales -->
-                
-    <!-- Footer -->
-    <footer>
+    <section class="pre-footer" aria-label="Información de contacto">
+      <div class="pre-footer-container">
+        <!-- Columna 1: Ventajas -->
+        <div
+          class="pre-footer-column2"
+          aria-labelledby="ventajas de usar RiffZone Music Store"
+        >
+          <h3 id="ventajas-title">
+            Ventajas de comprar en RiffZone Music Store
+          </h3>
+          <ul>
+            <li>Garantía de calidad</li>
+            <li>Devolución fácil y rápida</li>
+            <li>Servicio técnico</li>
+            <li>Asesoramiento personalizado</li>
+          </ul>
+        </div>
+        <!-- Columna 2: Métodos de pago y redes sociales de contacto-->
+        <div class="pre-footer-column1" aria-label="Redes sociales">
+          <h3 id="metodos-pagos">Métodos de pago</h3>
+          <div class="payment-methods">
+            <a
+              href="https://www.paypal.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="PayPal"
+            >
+              <img src="../assets/images/icons8-paypal-48.png" alt="PayPal" width="48" height="48"/>
+            </a>
+            <a
+              href="https://www.visa.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visa"
+            >
+              <img src="../assets/images/icons8-visa-48 (1).png" alt="Visa"  width="48" height="48"/>
+            </a>
+            <a
+              href="https://www.mastercard.es"
+              target="_blank"
+              rel="noopener"
+              aria-label="MasterCard"
+            >
+              <img
+                src="../assets/images/icons8-mastercard-48.png" width="48" height="48"
+                alt="MasterCard"
+              />
+            </a>
+            <a
+              href="https://www.americanexpress.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="American Express"
+            >
+              <img
+                src="../assets/images/icons8-american-express-al-cuadrado-48.png"
+                alt="American Express" width="48" height="48"
+              />
+            </a>
+          </div>
+          <br>
+          <h3>Síguenos</h3>
+          <nav aria-label="Redes sociales">
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61577710023966&locale=es_ES"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <img
+                    src="../assets/images/RedesSocialesIcons/logofacebook.png"
+                    alt="Facebook" width="48" height="48"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/RiffzoneMStore"
+                  aria-label="Twitter"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="../assets/images/RedesSocialesIcons/logotwitter.png"
+                    alt="Twitter" width="48" height="48"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/riffzone_music_store/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <img
+                    src="../assets/images/RedesSocialesIcons/logoinstagram.png"
+                    alt="Instagram" width="48" height="48"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@RiffZoneMusicStore"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="YouTube"
+                >
+                  <img
+                    src="../assets/images/RedesSocialesIcons/logoyoutube.png"
+                    alt="YouTube" width="48" height="48"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- Footer dinámico -->
+    <div id="footer-placeholder"></div>
 
-    </footer>
+    <!-- Modal de inicio de sesión -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+      aria-modal="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form aria-label="Formulario de inicio de sesión">
+            <!-- Cabecera del modal: título y botón de cerrar -->
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="loginModalLabel">
+                Iniciar Sesión
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar ventana de inicio de sesión"
+              ></button>
+            </div>
+            <!-- Cuerpo del modal: formulario de usuario y contraseña -->
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="user" class="form-label">Usuario</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="user"
+                  aria-required="true"
+                  aria-label="Usuario"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  aria-required="true"
+                  aria-label="contraseña"
+                  required
+                  autocomplete="current-password"
+                />
+              </div>
+              <!-- Footer del modal: botón de entrar y crear usuario -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  aria-label="Entrar"
+                >
+                  Entrar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  aria-label="Ir a crear nueva cuenta"
+                  onclick="window.location.href='register.html'"
+                >
+                  Crear Usuario
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      window.PRODUCT_CATEGORY = ["guitar", "basses"];
+      window.PRODUCT_CONTAINER_ID = "guitar-products";
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/productos.js"></script>
     <script src="../js/cart.js"></script>
-
-    <!-- Modal de Producto Añadido -->
-		
-</body>
+    <script src="../js/login.js"></script>
+    <script src="../js/headerMenu.js"></script>
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/cookies-banner.js"></script>
+  </body>
 </html>
