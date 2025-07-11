@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const API_BASE_URL = "http://localhost:3000";
   const form = document.getElementById("registroForm");
   if (!form) {
-    // Si no existe el formulario, no hacer nada (evita error en páginas sin registro)
     return;
   }
 
@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let valid = true;
 
-    // Validar cada campo
     const campos = [
       form.nombre,
       form.apellidos,
@@ -66,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!validarCampo(campo)) valid = false;
     });
 
-    // Validar que email y confirmar email coincidan
     if (form.email.value.trim() !== form.confirmarEmail.value.trim()) {
       setError(form.confirmarEmail, "Los correos electrónicos no coinciden.");
       valid = false;
@@ -74,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
       clearError(form.confirmarEmail);
     }
 
-    // Validar que password y confirmar password coincidan
     if (form.password.value !== form.confirmarPassword.value) {
       setError(form.confirmarPassword, "Las contraseñas no coinciden.");
       valid = false;
@@ -82,14 +79,19 @@ document.addEventListener("DOMContentLoaded", function () {
       clearError(form.confirmarPassword);
     }
 
-    if (!valid) return;
+    // 👉 ENFOCAR PRIMER CAMPO CON ERROR (Paso 3)
+    if (!valid) {
+      const firstError = form.querySelector(".is-invalid");
+      if (firstError) {
+        firstError.focus();
+      }
+      return;
+    }
 
-    // Preparar datos para enviar
     const usuario = {
       username: form.nombre.value.trim(),
       password: form.password.value,
       email: form.email.value.trim(),
-      // Puedes añadir el resto de campos si quieres guardarlos en el futuro
       nombre: form.nombre.value.trim(),
       apellidos: form.apellidos.value.trim(),
       telefono: form.telefono.value.trim(),
@@ -99,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
       direccion: form.direccion.value.trim(),
     };
 
-    // Enviar datos al backend
     fetch(`${API_BASE_URL}/api/register`, {
       method: "POST",
       headers: {
@@ -112,11 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return res.json();
       })
       .then((data) => {
-        alert(
-          data.message || data.mensaje || "Usuario registrado correctamente."
-        );
+        alert(data.message || data.mensaje || "Usuario registrado correctamente.");
         form.reset();
-        // Quitar estilos de error si los hubiese
         campos.forEach((campo) => clearError(campo));
       })
       .catch(async (err) => {
@@ -130,4 +128,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Elimina la declaración duplicada de API_BASE_URL, usará la global de auth.js
+// Mostrar/ocultar contraseña
+document.querySelectorAll(".toggle-password").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const targetId = this.getAttribute("data-target");
+    const input = document.getElementById(targetId);
+    const icon = this.querySelector("i");
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("bi-eye");
+      icon.classList.add("bi-eye-slash");
+    } else {
+      input.type = "password";
+      icon.classList.remove("bi-eye-slash");
+      icon.classList.add("bi-eye");
+    }
+  });
+});

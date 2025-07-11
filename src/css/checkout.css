@@ -354,8 +354,9 @@
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   justify-content: center;
-  background: #ffffff;
+  background: #f5f6fa;
   border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   padding: 2.5rem 1.5rem 2.5rem 1.5rem;
 }
 
@@ -873,6 +874,7 @@
   flex: 1 1 350px;
   background: #fff;
   border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   padding: 2rem 1.5rem;
   min-width: 320px;
   max-width: 480px;
@@ -882,6 +884,7 @@
   flex: 1 1 350px;
   background: #fff;
   border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   padding: 2rem 1.5rem;
   min-width: 320px;
   max-width: 480px;
@@ -1550,30 +1553,3 @@ button.btn-cart-action:hover,
     order: 3 !important; /* AÑADIR siempre último */
   }
 }
-
-/* =========================
-   Estilos para los campos del formulario
-========================= */
-
-/* Estilo personalizado para campos de formulario en checkout */
-.checkout-form .form-control:focus {
-  border-color: #e89229;
-  box-shadow: 0 0 0 3px rgba(232, 146, 41, 0.25);
-  outline: none;
-}
-
-/* Estilo específico para los campos select */
-.checkout-form .form-select:focus {
-  border-color: #e89229;
-  box-shadow: 0 0 0 3px rgba(232, 146, 41, 0.25);
-  outline: none;
-}
-
-/* Botones del checkout con el mismo estilo que en contacto */
-.checkout-form button:focus,
-.checkout-form .btn-primary:focus {
-  background-color: #d97d19;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  outline: none;
-}
-

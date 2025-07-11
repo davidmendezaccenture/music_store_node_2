@@ -3,7 +3,6 @@
 /* Estructura principal */
 main {
   padding: 0.5rem;
-  color: #000;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -47,11 +46,11 @@ main {
 
 .about-store-name {
   font-weight: bold;
-  color: #e89229;
+  color: #c77619;
 }
 
 .texto-central-servicios h3 {
-  color: #e89229;
+  color: #c77619;
   font-weight: bold;
   text-align: center;
   font-size: 1.2rem;
@@ -83,7 +82,7 @@ main {
 .servicio {
   border: 1px solid #fdfdfd;
   border-radius: 8px;
-  background: #e89229;
+  background: #c77619;
   overflow: hidden;
 }
 

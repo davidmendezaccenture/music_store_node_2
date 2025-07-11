@@ -13,7 +13,7 @@ body {
   padding: 0;
   font-family: "Oswald", sans-serif; /* Fuente global */
   box-sizing: border-box;
-  background-color: #ffffff !important;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 main {
@@ -526,6 +526,135 @@ main {
   transform: scale(1.1);
 }
 
+/* =========================
+   footer
+========================= */
+.footer-principal {
+  background-color: #222;
+  color: #fff;
+  padding: 1.2rem 0;
+  font-family: "Oswald", sans-serif;
+}
+.footer-contenedor {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.footer-logo img {
+  width: 40px;
+  height: 40px;
+}
+.footer-logo span {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #e89229;
+}
+
+.store-name {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #e89229 !important;
+}
+
+.footer-derechos small {
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Color corporativo RiffZone para cookies*/
+.corporate-success {
+  background-color: #fff5e6 !important; /* Naranja muy suave */
+  color: #c25a00 !important; /* Naranja corporativo más oscuro */
+  border: 1.5px solid #ffd6a8 !important;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(194, 90, 0, 0.07);
+}
+
+/* ============================
+   Media queries
+============================= */
+
+/*movil */
+@media (max-width: 576px) {
+  .carousel,
+  .testimonial-card {
+    width: 70%;
+  }
+
+  .testimonials-carousel {
+    width: 70%;
+    padding: 1rem;
+  }
+
+  .testimonial-card {
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .title-page {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .volver-button {
+    margin: 1rem auto;
+    display: block;
+  }
+}
+
+/* TABLETS  */
+@media (min-width: 577px) and (max-width: 991px) {
+  .carousel {
+    width: 80%;
+  }
+
+  .testimonials-carousel {
+    width: 80%;
+  }
+
+  .testimonial-card {
+    width: 75%;
+  }
+
+  .title-page {
+    width: 80%;
+  }
+}
+
+/* PANTALLAS GRANDES */
+@media (min-width: 992px) {
+  .carousel {
+    max-width: 700px;
+  }
+
+  .testimonials-carousel {
+    max-width: 700px;
+  }
+
+  .testimonial-card {
+    max-width: 450px;
+  }
+
+  .title-page {
+    width: 80%;
+  }
+}
+
 @media (max-width: 768px) {
   .pre-footer-container {
     flex-direction: column;
@@ -579,53 +708,6 @@ main {
   }
 }
 
-/* =========================
-   footer
-========================= */
-.footer-principal {
-  background-color: #222;
-  color: #fff;
-  padding: 1.2rem 0;
-  font-family: "Oswald", sans-serif;
-}
-.footer-contenedor {
-  max-width: 70rem;
-  margin: 0 auto;
-  padding: 0 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-.footer-logo img {
-  width: 40px;
-  height: 40px;
-}
-.footer-logo span {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: #e89229;
-}
-
-.store-name {
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: #e89229 !important;
-}
-
-.footer-derechos small {
-  font-size: 0.9rem;
-  color: #ffffff;
-  text-align: center;
-}
 @media (min-width: 768px) {
   .footer-contenedor {
     flex-direction: row;
@@ -635,9 +717,6 @@ main {
   }
 }
 
-/* =========================
-   Responsive: pantallas pequeñas
-========================= */
 @media (max-width: 768px) {
   .carousel {
     width: 90vw;

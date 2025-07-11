@@ -535,16 +535,17 @@
   font-size: 1rem !important;
   background: #fff !important;
   border: 2px solid #e89229 !important;
-  color: #111 !important;
+  color: #333 !important;
   border-radius: 8px !important;
   transition: background 0.2s, color 0.2s, border 0.2s !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 12px 20px !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   cursor: pointer !important;
   text-align: center !important;
+   font-family: "Oswald", sans-serif;
 }
 /* Color naranja para el icono del botón de filtro */
 .buscador-filtros-btn i {
@@ -605,6 +606,7 @@
   color: #e89229 !important;
   opacity: 0.8 !important;
   font-weight: 500 !important;
+   font-family: "Oswald", sans-serif;
 }
 
 .buscador-input-modern:focus {
@@ -702,12 +704,18 @@
   font-weight: 600;
   font-size: 1.3rem;
   margin: 0;
-  color: white;
+  color: #333
 }
 
 .offcanvas-body {
   padding: 1.5rem;
   background: #fafafa;
+}
+
+.offcanvas-body option {
+  color: #333;
+   font-family: "Oswald", sans-serif;
+   font-size: 1rem;
 }
 
 /* Estilos para los filtros avanzados */

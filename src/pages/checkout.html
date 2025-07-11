@@ -4,35 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout - RiffZone Music Store</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
+
+    <!-- Fuentes y estilos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/cookies-banner.css" />
   </head>
+
   <body>
+    <!-- Componentes dinámicos -->
     <div id="header-placeholder"></div>
+    <div id="login-modal-placeholder"></div>
+
+    <!-- Contenido principal -->
     <main
       class="container checkout-container flex-row"
       role="main"
-      aria-label="Formulario de pago"
-      style="
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        align-items: flex-start;
-      "
+      aria-label="Checkout de compra"
+      style="display: flex; flex-direction: row; gap: 2rem; align-items: flex-start;"
     >
       <!-- Formulario de pago -->
       <form
@@ -43,99 +37,43 @@
         aria-label="Formulario de pago"
         style="flex: 1 1 350px; max-width: 480px; min-width: 320px"
       >
-        <h1
-          class="mb-4"
-          style="color: #e89229; font-family: 'Oswald', sans-serif"
-        >
+        <h1 class="mb-4" style="color: #e89229; font-family: 'Oswald', sans-serif">
           Datos de envío y pago
         </h1>
+
         <div class="mb-3">
           <label for="checkoutName" class="form-label">Nombre completo</label>
-          <input
-            type="text"
-            class="form-control"
-            id="checkoutName"
-            name="name"
-            required
-            aria-required="true"
-            maxlength="60"
-            aria-describedby="nameError"
-          />
+          <input type="text" class="form-control" id="checkoutName" name="name" required maxlength="60" aria-required="true" aria-describedby="nameError" />
           <div class="invalid-feedback">Introduce tu nombre completo.</div>
         </div>
+
         <div class="mb-3">
-          <label for="checkoutEmail" class="form-label"
-            >Correo electrónico</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="checkoutEmail"
-            name="email"
-            required
-            aria-required="true"
-            maxlength="60"
-            autocomplete="email"
-        aria-describedby="emailError"
-          />
+          <label for="checkoutEmail" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="checkoutEmail" name="email" required maxlength="60" aria-required="true" autocomplete="email" aria-describedby="emailError" />
           <div class="invalid-feedback">Introduce un email válido.</div>
         </div>
+
         <div class="mb-3">
-          <label for="checkoutAddress" class="form-label"
-            >Dirección de envío</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="checkoutAddress"
-            name="address"
-            required
-            aria-required="true"
-            maxlength="120"
-            aria-describedby="addressError"
-          />
-          <div class="invalid-feedback" id="addressError" >Introduce tu dirección de envío.</div>
+          <label for="checkoutAddress" class="form-label">Dirección de envío</label>
+          <input type="text" class="form-control" id="checkoutAddress" name="address" required maxlength="120" aria-required="true" aria-describedby="addressError" />
+          <div class="invalid-feedback" id="addressError">Introduce tu dirección de envío.</div>
         </div>
+
         <div class="mb-3">
           <label for="checkoutCity" class="form-label">Ciudad</label>
-          <input
-            type="text"
-            class="form-control"
-            id="checkoutCity"
-            name="city"
-            required
-            aria-required="true"
-            maxlength="40"
-              aria-describedby="cityError"
-          />
+          <input type="text" class="form-control" id="checkoutCity" name="city" required maxlength="40" aria-required="true" aria-describedby="cityError" />
           <div class="invalid-feedback" id="cityError">Introduce tu ciudad.</div>
         </div>
+
         <div class="mb-3">
           <label for="checkoutPostal" class="form-label">Código Postal</label>
-          <input
-            type="text"
-            class="form-control"
-            id="checkoutPostal"
-            name="postal"
-            required
-            aria-required="true"
-            maxlength="10"
-            pattern="[0-9]{4,10}"
-            aria-describedby="postalError"
-          />
+          <input type="text" class="form-control" id="checkoutPostal" name="postal" required maxlength="10" pattern="[0-9]{4,10}" aria-required="true" aria-describedby="postalError" />
           <div class="invalid-feedback" id="postalError">Introduce un código postal válido.</div>
         </div>
+
         <div class="mb-3">
           <label for="checkoutPayment" class="form-label">Método de pago</label>
-          <select
-            class="form-select"
-            id="checkoutPayment"
-            name="payment"
-            required
-            aria-required="true"
-            aria-label="Selecciona un método de pago"
-        aria-describedby="paymentError"
-          >
+          <select class="form-select" id="checkoutPayment" name="payment" required aria-required="true" aria-label="Selecciona un método de pago" aria-describedby="paymentError">
             <option value="">Selecciona un método</option>
             <option value="visa">Visa</option>
             <option value="mastercard">Mastercard</option>
@@ -144,53 +82,23 @@
           </select>
           <div class="invalid-feedback" id="paymentError">Selecciona un método de pago.</div>
         </div>
+
         <div class="mb-3">
-          <label for="checkoutCard" class="form-label"
-            >Número de tarjeta (si aplica)</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="checkoutCard"
-            name="card"
-            maxlength="19"
-            pattern="[0-9 ]{13,19}"
-            autocomplete="cc-number"
-            aria-describedby="cardError"
-          />
-          <div class="invalid-feedback" id="cardError">
-            Introduce un número de tarjeta válido.
-          </div>
+          <label for="checkoutCard" class="form-label">Número de tarjeta (si aplica)</label>
+          <input type="text" class="form-control" id="checkoutCard" name="card" maxlength="19" pattern="[0-9 ]{13,19}" autocomplete="cc-number" aria-describedby="cardError" />
+          <div class="invalid-feedback" id="cardError">Introduce un número de tarjeta válido.</div>
         </div>
+
         <div class="mb-3">
-          <label for="checkoutNotes" class="form-label"
-            >Notas para el pedido (opcional)</label
-          >
-          <textarea
-            class="form-control"
-            id="checkoutNotes"
-            name="notes"
-            rows="2"
-            maxlength="200"
-          ></textarea>
+          <label for="checkoutNotes" class="form-label">Notas para el pedido (opcional)</label>
+          <textarea class="form-control" id="checkoutNotes" name="notes" rows="2" maxlength="200"></textarea>
         </div>
+
         <div class="checkout-actions">
-          <button
-            type="button"
-            class="checkout-cancel"
-            id="cancelCheckout"
-            aria-label="Cancelar pago"
-          >
-            Cancelar
-          </button>
-          <button
-            type="submit"
-            class="checkout-confirm"
-            aria-label="Confirmar y pagar"
-          >
-            Confirmar y pagar
-          </button>
+          <button type="button" class="checkout-cancel" id="cancelCheckout" aria-label="Cancelar pago">Cancelar</button>
+          <button type="submit" class="checkout-confirm" aria-label="Confirmar y pagar">Confirmar y pagar</button>
         </div>
+
         <h2 class="main-title carrito-title checkout-total text-end m-0 mt-3">
           <span id="checkoutTotal">0.00 €</span>
         </h2>
@@ -202,10 +110,7 @@
         aria-label="Resumen de productos en el carrito"
         style="flex: 1 1 350px; max-width: 480px; min-width: 320px"
       >
-        <h2
-          class="mb-4"
-          style="color: #e89229; font-family: 'Oswald', sans-serif"
-        >
+        <h2 class="mb-4" style="color: #e89229; font-family: 'Oswald', sans-serif">
           Resumen de tu compra
         </h2>
         <div id="checkoutProducts"></div>
@@ -216,36 +121,20 @@
         id="confirmationMessage"
         role="status"
         aria-live="polite"
-        style="
-          display: none;
-          min-height: 350px;
-          text-align: center;
-          color: #28a745;
-          background: #fff;
-          border-radius: 1rem;
-          box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
-          padding: 2.5rem 2rem;
-          margin: 2rem auto;
-        "
+        style="display: none; min-height: 350px; text-align: center; color: #28a745; background: #fff; border-radius: 1rem; box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1); padding: 2.5rem 2rem; margin: 2rem auto;"
       >
         <i class="bi bi-check-circle-fill" aria-hidden="true" style="font-size: 2.5rem"></i>
         <div class="mt-3 fw-bold" style="font-size: 1.3rem">
-          ¡Pago realizado con éxito!<br />Gracias por tu compra en RiffZone
-          Music Store<br />Esperamos verte de nuevo pronto.
+          ¡Pago realizado con éxito!<br />Gracias por tu compra en RiffZone Music Store<br />Esperamos verte de nuevo pronto.
         </div>
       </div>
     </main>
+
     <!-- Pre-footer -->
     <section class="pre-footer" aria-label="Información de contacto">
       <div class="pre-footer-container">
-        <!-- Columna 1: Ventajas -->
-        <div
-          class="pre-footer-column2"
-          aria-labelledby="ventajas de usar RiffZone Music Store"
-        >
-          <h3 id="ventajas-title">
-            Ventajas de comprar en RiffZone Music Store
-          </h3>
+        <div class="pre-footer-column2" aria-labelledby="ventajas-title">
+          <h3 id="ventajas-title">Ventajas de comprar en RiffZone Music Store</h3>
           <ul>
             <li>Garantía de calidad</li>
             <li>Devolución fácil y rápida</li>
@@ -253,108 +142,56 @@
             <li>Asesoramiento personalizado</li>
           </ul>
         </div>
-        <!-- Columna 2: Métodos de pago y redes sociales de contacto-->
-        <div class="pre-footer-column1" aria-label="Redes sociales">          
+        <div class="pre-footer-column1" aria-label="Redes sociales">
           <h3 id="metodos-pagos">Métodos de pago</h3>
           <div class="payment-methods">
-            <a
-              href="https://www.paypal.com"
-              target="_blank"
-              rel="noopener"
-              aria-label="PayPal"
-            >
-              <img src="../assets/images/icons8-paypal-48.png" alt="PayPal" width="48" height="48"/>
+            <a href="https://www.paypal.com" target="_blank" rel="noopener" aria-label="PayPal">
+              <img src="../assets/images/icons8-paypal-48.png" alt="PayPal" width="48" height="48" />
             </a>
-            <a
-              href="https://www.visa.com"
-              target="_blank"
-              rel="noopener"
-              aria-label="Visa"
-            >
-              <img src="../assets/images/icons8-visa-48 (1).png" alt="Visa"  width="48" height="48"/>
+            <a href="https://www.visa.com" target="_blank" rel="noopener" aria-label="Visa">
+              <img src="../assets/images/icons8-visa-48 (1).png" alt="Visa" width="48" height="48" />
             </a>
-            <a
-              href="https://www.mastercard.es"
-              target="_blank"
-              rel="noopener"
-              aria-label="MasterCard"
-            >
-              <img
-                src="../assets/images/icons8-mastercard-48.png" width="48" height="48"
-                alt="MasterCard"
-              />
+            <a href="https://www.mastercard.es" target="_blank" rel="noopener" aria-label="MasterCard">
+              <img src="../assets/images/icons8-mastercard-48.png" alt="MasterCard" width="48" height="48" />
             </a>
-            <a
-              href="https://www.americanexpress.com"
-              target="_blank"
-              rel="noopener"
-              aria-label="American Express"
-            >
-              <img
-                src="../assets/images/icons8-american-express-al-cuadrado-48.png"
-                alt="American Express" width="48" height="48"
-              />
+            <a href="https://www.americanexpress.com" target="_blank" rel="noopener" aria-label="American Express">
+              <img src="../assets/images/icons8-american-express-al-cuadrado-48.png" alt="American Express" width="48" height="48" />
             </a>
           </div>
-          <br>
+          <br />
           <h3>Síguenos</h3>
           <nav aria-label="Redes sociales">
             <ul class="social-links">
               <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=61577710023966&locale=es_ES"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Facebook"
-                >
-                  <img
-                    src="../assets/images/RedesSocialesIcons/logofacebook.png"
-                    alt="Facebook" width="48" height="48"
-                /></a>
+                <a href="https://www.facebook.com/profile.php?id=61577710023966&locale=es_ES" target="_blank" rel="noopener" aria-label="Facebook">
+                  <img src="../assets/images/RedesSocialesIcons/logofacebook.png" alt="Facebook" width="48" height="48" />
+                </a>
               </li>
               <li>
-                <a
-                  href="https://x.com/RiffzoneMStore"
-                  aria-label="Twitter"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img
-                    src="../assets/images/RedesSocialesIcons/logotwitter.png"
-                    alt="Twitter" width="48" height="48"
-                /></a>
+                <a href="https://x.com/RiffzoneMStore" target="_blank" rel="noopener" aria-label="Twitter">
+                  <img src="../assets/images/RedesSocialesIcons/logotwitter.png" alt="Twitter" width="48" height="48" />
+                </a>
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/riffzone_music_store/"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Instagram"
-                >
-                  <img
-                    src="../assets/images/RedesSocialesIcons/logoinstagram.png"
-                    alt="Instagram" width="48" height="48"
-                /></a>
+                <a href="https://www.instagram.com/riffzone_music_store/" target="_blank" rel="noopener" aria-label="Instagram">
+                  <img src="../assets/images/RedesSocialesIcons/logoinstagram.png" alt="Instagram" width="48" height="48" />
+                </a>
               </li>
               <li>
-                <a
-                  href="https://www.youtube.com/@RiffZoneMusicStore"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="YouTube"
-                >
-                  <img
-                    src="../assets/images/RedesSocialesIcons/logoyoutube.png"
-                    alt="YouTube" width="48" height="48"
-                /></a>
+                <a href="https://www.youtube.com/@RiffZoneMusicStore" target="_blank" rel="noopener" aria-label="YouTube">
+                  <img src="../assets/images/RedesSocialesIcons/logoyoutube.png" alt="YouTube" width="48" height="48" />
+                </a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </section>
+
     <!-- Footer dinámico -->
     <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/auth.js"></script>
     <script src="../js/checkout.js"></script>

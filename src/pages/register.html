@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/register.css"/>
@@ -19,14 +20,19 @@
   </head>
   <body>
     <!-- Cabecera de la página -->
+    <div id="login-modal-placeholder"></div>
     <div id="header-placeholder"></div>
-    <main class="zona-registro" role="main">
+
+    <main class="zona-registro">
+      <h1 class="visually-hidden">Formulario de registro de usuario</h1>
       <div class="registro-contenedor">
         <div class="registro-box">
           <h1 class="registro-titulo">
             <span>Crear cuenta</span>
-          </h1>
-          <form id="registroForm" novalidate>
+
+          </h2>
+          <p id="instrucciones" class="form-text">Los campos marcados con * son obligatorios.</p>
+          <form id="registroForm" novalidate aria-describedby="instrucciones">
             <!-- Nombre -->
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre *</label>
@@ -438,25 +444,12 @@
     <script src="../js/loadComponents.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/validacion-registro.js"></script>
+
+    <script src="../js/login.js"></script>
+
+
     <script src="../js/cookies-banner.js"></script>
     <script>
-      // Lógica para mostrar/ocultar contraseña
-      document.querySelectorAll(".toggle-password").forEach((btn) => {
-        btn.addEventListener("click", function () {
-          const targetId = this.getAttribute("data-target");
-          const input = document.getElementById(targetId);
-          const icon = this.querySelector("i");
-          if (input.type === "password") {
-            input.type = "text";
-            icon.classList.remove("bi-eye");
-            icon.classList.add("bi-eye-slash");
-          } else {
-            input.type = "password";
-            icon.classList.remove("bi-eye-slash");
-            icon.classList.add("bi-eye");
-          }
-        });
-      });
-    </script>
+      
   </body>
 </html>
